@@ -51,3 +51,6 @@ Test Cases:
 I have created a greptest.go file test cases evaluation/TDD.
 In this I have created only 1 test for matching output of the Grep function, but we can add many of
 test cases and scenarios.
+
+We can Also add table driven tests.
+Reference - https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package

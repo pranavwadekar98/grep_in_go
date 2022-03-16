@@ -1,4 +1,4 @@
-package main
+package naivemain
 
 import "fmt"
 import (
