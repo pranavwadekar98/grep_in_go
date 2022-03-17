@@ -28,5 +28,4 @@ func Grep(searched_string string, filename string) ([]string){
 func main(){
     output := Grep("pranav", "some_text.txt")
     fmt.Println(output)
-    return output
 }
