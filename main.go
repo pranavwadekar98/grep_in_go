@@ -33,7 +33,7 @@ func main(){
     var matches []string
     var wg sync.WaitGroup
 
-    c := make(chan []string, 3)
+    c := make(chan []string)
 
     root := "/home/pranavwadekar/jana/grep_in_go/"
     string_to_be_searched := "pranav"
