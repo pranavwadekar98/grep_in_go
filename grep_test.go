@@ -1,4 +1,4 @@
-package naivemain
+package main
 
 import "testing"
 
