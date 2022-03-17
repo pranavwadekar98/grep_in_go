@@ -1,11 +1,15 @@
-package main
+package naive_main
 
-import "testing"
+import (
+        "fmt"
+        "testing"
+        "reflect"
+        )
 
 func TestGrep(t *testing.T) {
    got := Grep("pranav", "some_text.txt")
    want := []string{"pranavwadekar", "Ppranavisokokatwork"}
-   if got != want {
-       t.Errorf("method produced wrong result. expected: %d, got: %d", want, got)
+   if reflect.DeepEqual(got, want) {
+       fmt.Println(want, got)
   }
 }
