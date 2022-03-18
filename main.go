@@ -28,8 +28,19 @@ func Grep(searched_string string, filename string, c chan []string){
 //     fmt.Println(output_lines, <-c)
 }
 
-func main(){
+func getFilesFromAllSubDirectories(path string)([]string, error){
     var files []string
+    err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
+        if filepath.Ext(path) != ".txt" {
+            return nil
+        }
+        files = append(files, path)
+        return nil
+        }) //getting all the .text files from all the sub folders
+    return files, err
+}
+
+func main(){
     var matches []string
     var wg sync.WaitGroup
 
@@ -42,13 +53,8 @@ func main(){
     if os.IsNotExist(err1) {
         log.Fatal("File/Directory does not exist.")
     }
-    err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
-        if filepath.Ext(path) != ".txt" {
-            return nil
-        }
-        files = append(files, path)
-        return nil
-        }) //getting all the .text files from all the sub folders
+    files, err := getFilesFromAllSubDirectories(root)
+
     if err != nil {
         fmt.Println(err)
     }
