@@ -47,7 +47,7 @@ func main(){
     c := make(chan []string)
 
     root := "/home/pranavwadekar/jana/grep_in_go/"
-    string_to_be_searched := "pranav"
+    string_to_be_searched := "pranavwadekarsa"
     _, err1 := os.Stat(root)
 
     if os.IsNotExist(err1) {
