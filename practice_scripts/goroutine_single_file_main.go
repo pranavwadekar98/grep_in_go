@@ -1,4 +1,4 @@
-package main
+package sample_subroutine_main
 
 import "fmt"
 import (

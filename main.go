@@ -71,7 +71,7 @@ func main(){
         log.Fatal("File/Directory does not exist.")
     }
     files, err := getFilesFromAllSubDirectories(root)
-
+    fmt.Println(files)
     if err != nil {
         fmt.Println(err)
     }

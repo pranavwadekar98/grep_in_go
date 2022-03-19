@@ -71,3 +71,8 @@ test cases and scenarios.
 
 We can Also add table driven tests.
 Reference - https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package
+
+The code coverage is upto 68.3 percent.
+(TODO - Add test case for main function)
+
+![alt text](https://github.com/pranavwadekar98/grep_in_go/blob/develop/images/code_coverage.png?raw=true)
