@@ -40,24 +40,11 @@ func getFilesFromAllSubDirectories(path string)([]string, error){
     return files, err
 }
 
-func main(){
+func findOptimizedMatches(files []string, string_to_be_searched string) ([]string){
     var matches []string
     var wg sync.WaitGroup
-
     c := make(chan []string)
 
-    root := "/home/pranavwadekar/jana/grep_in_go/"
-    string_to_be_searched := "pranavwadekarsa"
-    _, err1 := os.Stat(root)
-
-    if os.IsNotExist(err1) {
-        log.Fatal("File/Directory does not exist.")
-    }
-    files, err := getFilesFromAllSubDirectories(root)
-
-    if err != nil {
-        fmt.Println(err)
-    }
     for _, file := range files {
         wg.Add(1) //adding count of goroutines for waitgroup
         go Grep(string_to_be_searched, file, c)
@@ -69,6 +56,26 @@ func main(){
 		}
 	}()
 	wg.Wait() //wait till counter goes to 0
+	return matches
+}
+
+func main(){
+    var matches []string
+
+    root := "/home/pranavwadekar/jana/grep_in_go/"
+    string_to_be_searched := "pranav"
+
+    _, err1 := os.Stat(root)
+
+    if os.IsNotExist(err1) {
+        log.Fatal("File/Directory does not exist.")
+    }
+    files, err := getFilesFromAllSubDirectories(root)
+
+    if err != nil {
+        fmt.Println(err)
+    }
+    matches = findOptimizedMatches(files, string_to_be_searched)
 	fmt.Println(matches)
 
 }
