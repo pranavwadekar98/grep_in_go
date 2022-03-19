@@ -76,6 +76,6 @@ func main(){
         fmt.Println(err)
     }
     matches = findOptimizedMatches(files, string_to_be_searched)
-	fmt.Println(matches)
+    fmt.Println(matches)
 
 }
