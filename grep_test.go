@@ -8,7 +8,7 @@ import (
 
 func TestGrep(t *testing.T) {
    got := findOptimizedMatches([]string{"/home/pranavwadekar/jana/grep_in_go/some_text.txt"}, "pranav")
-   want := []string{"pranavwadekar", "Ppranavisokokatwork"}
+   want := []string{"pranavwadekar", "Ppranavisotwork", "ppranvisgoodatchess randompranav ispranavispranav"}
    if reflect.DeepEqual(got, want) {
        fmt.Println(want, got)
   } else {
