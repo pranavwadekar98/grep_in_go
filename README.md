@@ -9,11 +9,11 @@ I/O:
 
 Example:
 1. randomfile.txt -> a. pranavwadekar
-                     b. Pranavisokokatwork
-                     c. ppranavisnotgoodatpeople.
+                     b. Pranavisotwork
+                     c. ppranavisgoodatpeople.
 2. Input - ('pranav', 'randomfile.txt')
 3. Output - pranavwadekar
-            ppranav is not good at people
+            ppranavisgoodatpeople
 
 
 For naive_main.go
@@ -29,7 +29,7 @@ Test Cases:
 
 I/O:
 I - "some_text.txt" (Expecting in the current directory)
-O - ["Ppranavisokokatwork" "pranavwadekar"]
+O - ["Ppranavisotwork" "pranavwadekar"]
 
 For goroutine_single_file_main.go
 Assumption: 
@@ -46,7 +46,7 @@ Test Cases:
 
 I/O:
 I - "some_text.txt" (Expecting in the current directory)
-O - ["Ppranavisokokatwork" "pranavwadekar"]
+O - ["Ppranavisotwork" "pranavwadekar"]
 
 For main.go
 
@@ -63,7 +63,7 @@ Test Cases:
 
 I/O:
 I - "/home/username/grep_in_go/"
-O - ["pranavwadekar" "Ppranavisokokatwork" "pranavwadekarsampl1.1" "pranavwadekarsampl1.2"]
+O - ["pranavwadekar" "Ppranavisotwork" "pranavwadekarsampl1.1" "pranavwadekarsampl1.2"]
 
 I have created a greptest.go file test cases evaluation/TDD.
 In this I have created only 1 test for matching output of the Grep function, but we can add many of
