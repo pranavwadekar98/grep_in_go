@@ -78,5 +78,6 @@ Reference - https://www.digitalocean.com/community/tutorials/how-to-write-unit-t
 
 The code coverage is upto 68.3 percent.
 (TODO - Add test case for main function)
-
+(TODO - Add openFile function and moved it away from Grep)
+(TODO - Add input flags to get it processed on any machine)
 ![alt text](https://github.com/pranavwadekar98/grep_in_go/blob/develop/images/code_coverage.png?raw=true)
